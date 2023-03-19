@@ -31,7 +31,7 @@ int cbinsearch(int* arr, int size, int value) {
       return 1000;
     }
   }
-  n = number;
+  int n = number;
   while (arr[n] == value) {
     res++;
     n++;
