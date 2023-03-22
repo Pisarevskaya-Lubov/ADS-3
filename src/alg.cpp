@@ -18,18 +18,20 @@ int cbinsearch(int* arr, int size, int value) {
             while (number >= 0 && arr[number-1] == value) {
                 if (arr[number-1] == value) {
                   res++;
-                } else{
+                } else {
                     break;
                 }
                 number--;
             }
-            while (number < size && number >= 0) {
-                if (arr[number] == value) {
-                    res++;
-                } else {
-                    break;
+            while (number < size ) {
+                while (nuber >= 0) {
+                  if (arr[number] == value) {
+                      res++;
+                  } else {
+                      break;
+                  }
+                  number++;
                 }
-                number++;
             }
         }
         return res;
