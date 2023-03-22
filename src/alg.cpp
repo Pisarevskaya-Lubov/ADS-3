@@ -1,7 +1,6 @@
 // Copyright 2021 NNTU-CS
 
 int cbinsearch(int* arr, int size, int value) {
-int cbinsearch(int* arr, int size, int value) {
     int res = 0;
     int size2 = size / 2;
     int size3 = 0;
@@ -10,11 +9,9 @@ int cbinsearch(int* arr, int size, int value) {
         size4 = size2 - size3 / 2;
         if (arr[size4] > value) {
             size2 = size4 - 1;
-        }
-        else if (arr[size4] < value) {
+        } else if (arr[size4] < value) {
             size3 = size4 + 1;
-        }
-        else if (arr[size4] == value) {
+        } else if (arr[size4] == value) {
             res++;
             int number = size4 - 1;
             while (number < size) {
@@ -31,8 +28,7 @@ int cbinsearch(int* arr, int size, int value) {
                 }
             }
 
-        }
-        else {
+        } else {
             return 0;
         }
         return res;
