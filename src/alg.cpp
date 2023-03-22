@@ -16,14 +16,18 @@ int cbinsearch(int* arr, int size, int value) {
             int number = size4 - 1;
             number = size4 + 1;
             while (number >= 0 && arr[number-1] == value) {
-                if(arr[number-1] == value){
+                if (arr[number-1] == value) {
                   res++;
+                } else{
+                    break;
                 }
                 number--;
             }
             while (number < size && number >= 0) {
                 if (arr[number] == value) {
                     res++;
+                } else {
+                    break;
                 }
                 number++;
             }
