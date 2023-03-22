@@ -24,7 +24,7 @@ int cbinsearch(int* arr, int size, int value) {
                 number--;
             }
             while (number < size ) {
-                while (nuber >= 0) {
+                while (number >= 0) {
                   if (arr[number] == value) {
                       res++;
                   } else {
