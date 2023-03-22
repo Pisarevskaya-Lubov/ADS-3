@@ -11,15 +11,9 @@ int cbinsearch(int* arr, int size, int value) {
             size2 = size4 - 1;
         } else if (arr[size4] < value) {
             size3 = size4 + 1;
-        } else if (arr[size4] == value) {
+        } else {
             res++;
             int number = size4 - 1;
-            while (number < size && number >= 0) {
-                if (arr[number] == value) {
-                    res++;
-                }
-                number++;
-            }
             number = size4 + 1;
             while (number >= 0 && arr[number-1] == value) {
                 if(arr[number-1] == value){
@@ -27,8 +21,12 @@ int cbinsearch(int* arr, int size, int value) {
                 }
                 number--;
             }
-        } else {
-            return 0;
+            while (number < size && number >= 0) {
+                if (arr[number] == value) {
+                    res++;
+                }
+                number++;
+            }
         }
         return res;
     }
